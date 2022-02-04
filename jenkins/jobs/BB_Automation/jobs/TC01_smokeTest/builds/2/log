@@ -1,0 +1,10 @@
+Started by user [8mha:////4PawSXoOCXoQ2Ej0vEC2CUl/7QnxBditNbIBAImO8zNMAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mMr.Automation
+Rebuilds build #[8mha:////4Ok93k92ucFmqJJfEkb3dBXNTHUFMuIjolvB7Pd0203OAAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBnX9rPwkfSeneMfSkvzcxJLM/DywSIizgWF8cW5+dmpIanGJviEA0X2cudwAAAA=[0m1
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /home/kanthan/.jenkins/workspace/BB_Automation/TC01_smokeTest
+[TC01_smokeTest] $ /bin/sh -xe /tmp/jenkins7883301880183383228.sh
++ cd /media/kanthan/New Volume/bb_autorepo/BB_Automation
+/tmp/jenkins7883301880183383228.sh: 2: cd: can't cd to /media/kanthan/New
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

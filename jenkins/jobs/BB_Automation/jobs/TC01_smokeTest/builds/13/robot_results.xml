@@ -1,0 +1,44 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<result plugin="robot@3.0.1">
+  <logFile>log.html</logFile>
+  <reportFile>report.html</reportFile>
+  <timeStamp>20220202 23:10:33.018</timeStamp>
+  <suites>
+    <entry>
+      <string>BB automation</string>
+      <suite>
+        <duplicateSafeName>BB automation</duplicateSafeName>
+        <logFile>log.html</logFile>
+        <reportFile>report.html</reportFile>
+        <id>s1</id>
+        <children/>
+        <parent class="result" reference="../../../.."/>
+        <name>BB automation</name>
+        <description></description>
+        <caseResults>
+          <entry>
+            <string>TC01_Accountsummaryverfication</string>
+            <case>
+              <duplicateSafeName>TC01_Accountsummaryverfication</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <id>s1-t1</id>
+              <passed>true</passed>
+              <skipped>false</skipped>
+              <critical>false</critical>
+              <name>TC01_Accountsummaryverfication</name>
+              <description></description>
+              <starttime>20220202 23:10:33.843</starttime>
+              <endtime>20220202 23:10:42.030</endtime>
+              <tags/>
+              <stackTrace></stackTrace>
+              <parent reference="../../../.."/>
+              <failedSince>0</failedSince>
+            </case>
+          </entry>
+        </caseResults>
+        <startTime>20220202 23:10:33.019</startTime>
+        <endTime>20220202 23:10:42.031</endTime>
+      </suite>
+    </entry>
+  </suites>
+</result>

@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: hafner
+Build-Jdk: 11.0.13
+Extension-Name: warnings-ng
+Specification-Title: Jenkins Warnings Next Generation plugin collects 
+ compiler warnings or issues reported by static analysis
+     tools and visualizes the results. It has built-in support for num
+ erous static analysis tools (including several
+     compilers), see the list of supported report formats.
+Implementation-Title: warnings-ng
+Implementation-Version: 9.11.0
+Group-Id: io.jenkins.plugins
+Short-Name: warnings-ng
+Long-Name: Warnings Next Generation Plugin
+Url: https://github.com/jenkinsci/warnings-ng-plugin
+Minimum-Java-Version: 1.8
+Plugin-Version: 9.11.0
+Hudson-Version: 2.289.1
+Jenkins-Version: 2.289.1
+Plugin-Dependencies: analysis-model-api:10.9.1,bootstrap5-api:5.1.3-4,
+ checks-api:1.7.2,data-tables-api:1.11.3-6,echarts-api:5.2.2-2,font-aw
+ esome-api:5.15.4-5,forensics-api:1.7.0,jquery3-api:3.6.0-2,plugin-uti
+ l-api:2.12.0,prism-api:1.25.0-2,pull-request-monitoring:1.7.8;resolut
+ ion:=optional,workflow-api:2.47,workflow-cps:2.94,workflow-job:2.41,w
+ orkflow-step-api:2.24,antisamy-markup-formatter:2.5,apache-httpcompon
+ ents-client-4-api:4.5.13-1.0,credentials:2.6.1,dashboard-view:2.18;re
+ solution:=optional,jackson2-api:2.13.0-230.v59243c64b0a5,matrix-proje
+ ct:1.19;resolution:=optional,structs:1.23,token-macro:267.vcdaea64629
+ 91;resolution:=optional
+Plugin-Developers: Ullrich Hafner:uhafner:ullrich.hafner@gmail.com
+Plugin-License-Name: MIT license
+Plugin-ScmUrl: https://github.com/jenkinsci/warnings-ng-plugin
+

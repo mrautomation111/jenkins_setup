@@ -1,0 +1,53 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>admin</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+        <entry>
+          <com.sonyericsson.rebuild.RebuildCause plugin="rebuild@1.33">
+            <upstreamProject>BB_Automation/TC01_smokeTest</upstreamProject>
+            <upstreamUrl>job/BB_Automation/job/TC01_smokeTest/</upstreamUrl>
+            <upstreamBuild>14</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UserIdCause>
+                <userId>admin</userId>
+              </hudson.model.Cause_-UserIdCause>
+            </upstreamCauses>
+          </com.sonyericsson.rebuild.RebuildCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.4.0"/>
+    <hudson.plugins.robot.RobotBuildAction plugin="robot@3.0.1">
+      <descriptions class="concurrent-hash-map"/>
+      <outputPath>robot-plugin</outputPath>
+      <logFileLink>report.html</logFileLink>
+      <logHtmlLink>log.html</logHtmlLink>
+      <enableCache>true</enableCache>
+      <build class="build" reference="../../.."/>
+      <xAxisLabel></xAxisLabel>
+    </hudson.plugins.robot.RobotBuildAction>
+    <com.sonyericsson.rebuild.RebuildAction plugin="rebuild@1.33"/>
+  </actions>
+  <queueId>15</queueId>
+  <timestamp>1643999900469</timestamp>
+  <startTime>1643999900504</startTime>
+  <result>SUCCESS</result>
+  <duration>32505</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/home/kanthan/.jenkins/workspace/BB_Automation/TC01_smokeTest</workspace>
+  <hudsonVersion>2.319.2</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="java.util.Collections$UnmodifiableSet">
+    <c class="sorted-set"/>
+  </culprits>
+</build>

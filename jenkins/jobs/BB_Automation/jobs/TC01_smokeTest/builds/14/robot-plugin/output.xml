@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.10 on linux)" generated="20220204 23:46:51.767" rpa="false" schemaversion="2">
+<suite id="s1" name="BB Automation" source="/media/kanthan/New Volume/bb_autorepo/BB_Automation">
+<suite id="s1-s1" name="Testcases" source="/media/kanthan/New Volume/bb_autorepo/BB_Automation/Testcases">
+<suite id="s1-s1-s1" name="BB automation" source="/media/kanthan/New Volume/bb_autorepo/BB_Automation/Testcases/BB_automation.robot">
+<test id="s1-s1-s1-t1" name="TC01_Accountsummaryverfication">
+<kw name="Openbb_app" library="app_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220204 23:46:52.534" level="INFO">Opening browser 'gc' to base url 'https://bbsitedemo.btbanking.com/onlineserv/CM/?D=5472'.</msg>
+<status status="PASS" starttime="20220204 23:46:52.533" endtime="20220204 23:46:57.761"/>
+</kw>
+<kw name="web_clickelement" library="Commonkeywords">
+<arg>landingpage</arg>
+<arg>loginlink</arg>
+<kw name="GetLocatorDetails" library="Commonkeywords">
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<kw name="Log Many" library="BuiltIn">
+<arg>${ObjFile}</arg>
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20220204 23:46:57.765" level="INFO">/media/kanthan/New Volume/bb_autorepo/BB_Automation//Testdata//Objectrepo//objectrepo.xlsx</msg>
+<msg timestamp="20220204 23:46:57.765" level="INFO">landingpage</msg>
+<msg timestamp="20220204 23:46:57.766" level="INFO">loginlink</msg>
+<status status="PASS" starttime="20220204 23:46:57.765" endtime="20220204 23:46:57.766"/>
+</kw>
+<kw name="Openexcel" library="excellib">
+<arg>${ObjFile}</arg>
+<arg>Sheet</arg>
+<status status="PASS" starttime="20220204 23:46:57.766" endtime="20220204 23:46:57.786"/>
+</kw>
+<kw name="Filterbasedonpagenameandfieldname" library="excellib">
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<status status="PASS" starttime="20220204 23:46:57.786" endtime="20220204 23:46:57.788"/>
+</kw>
+<kw name="Converttolist" library="excellib">
+<var>${result}</var>
+<msg timestamp="20220204 23:46:57.788" level="INFO">${result} = [['landingpage', 'loginlink', '//a[text()="Click here to view an Interactive Demo"]', '20s', '1s']]</msg>
+<status status="PASS" starttime="20220204 23:46:57.788" endtime="20220204 23:46:57.788"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${name}</arg>
+<arg>${result}[0][0]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:46:57.790" level="INFO">${name} = landingpage</msg>
+<status status="PASS" starttime="20220204 23:46:57.789" endtime="20220204 23:46:57.790"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${field}</arg>
+<arg>${result}[0][1]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:46:57.792" level="INFO">${field} = loginlink</msg>
+<status status="PASS" starttime="20220204 23:46:57.790" endtime="20220204 23:46:57.792"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${locator}</arg>
+<arg>${result}[0][2]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:46:57.794" level="INFO">${locator} = //a[text()="Click here to view an Interactive Demo"]</msg>
+<status status="PASS" starttime="20220204 23:46:57.792" endtime="20220204 23:46:57.794"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${beforewait}</arg>
+<arg>${result}[0][3]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:46:57.796" level="INFO">${beforewait} = 20s</msg>
+<status status="PASS" starttime="20220204 23:46:57.795" endtime="20220204 23:46:57.796"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${afterwait}</arg>
+<arg>${result}[0][4]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:46:57.797" level="INFO">${afterwait} = 1s</msg>
+<status status="PASS" starttime="20220204 23:46:57.796" endtime="20220204 23:46:57.797"/>
+</kw>
+<status status="PASS" starttime="20220204 23:46:57.764" endtime="20220204 23:46:57.797"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${keywordstatus}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>${beforewait}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${beforewait}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220204 23:46:57.798" endtime="20220204 23:46:57.826"/>
+</kw>
+<msg timestamp="20220204 23:46:57.827" level="INFO">${keywordstatus} = True</msg>
+<status status="PASS" starttime="20220204 23:46:57.798" endtime="20220204 23:46:57.827"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${keywordstatus}</var>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>10</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220204 23:46:57.829" level="INFO">Clicking element '//a[text()="Click here to view an Interactive Demo"]'.</msg>
+<status status="PASS" starttime="20220204 23:46:57.829" endtime="20220204 23:47:00.946"/>
+</kw>
+<status status="PASS" starttime="20220204 23:46:57.828" endtime="20220204 23:47:00.947"/>
+</kw>
+<msg timestamp="20220204 23:47:00.947" level="INFO">${keywordstatus} = True</msg>
+<status status="PASS" starttime="20220204 23:46:57.827" endtime="20220204 23:47:00.947"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${afterwait}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220204 23:47:01.948" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220204 23:47:00.948" endtime="20220204 23:47:01.949"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${keywordstatus}"=="False"</arg>
+<arg>Fail</arg>
+<arg>${fieldname} is not visible on the screen \ ${pagename}... so please check</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220204 23:47:01.949" endtime="20220204 23:47:01.950"/>
+</kw>
+<status status="PASS" starttime="20220204 23:46:57.762" endtime="20220204 23:47:01.951"/>
+</kw>
+<status status="PASS" starttime="20220204 23:46:52.532" endtime="20220204 23:47:01.951"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220204 23:47:01.952" endtime="20220204 23:47:02.056"/>
+</kw>
+<kw name="web_Mouseover" library="Commonkeywords">
+<arg>landingpage</arg>
+<arg>Administration</arg>
+<kw name="GetLocatorDetails" library="Commonkeywords">
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<kw name="Log Many" library="BuiltIn">
+<arg>${ObjFile}</arg>
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20220204 23:47:02.059" level="INFO">/media/kanthan/New Volume/bb_autorepo/BB_Automation//Testdata//Objectrepo//objectrepo.xlsx</msg>
+<msg timestamp="20220204 23:47:02.059" level="INFO">landingpage</msg>
+<msg timestamp="20220204 23:47:02.059" level="INFO">Administration</msg>
+<status status="PASS" starttime="20220204 23:47:02.058" endtime="20220204 23:47:02.059"/>
+</kw>
+<kw name="Openexcel" library="excellib">
+<arg>${ObjFile}</arg>
+<arg>Sheet</arg>
+<status status="PASS" starttime="20220204 23:47:02.060" endtime="20220204 23:47:02.073"/>
+</kw>
+<kw name="Filterbasedonpagenameandfieldname" library="excellib">
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<status status="PASS" starttime="20220204 23:47:02.074" endtime="20220204 23:47:02.077"/>
+</kw>
+<kw name="Converttolist" library="excellib">
+<var>${result}</var>
+<msg timestamp="20220204 23:47:02.078" level="INFO">${result} = [['landingpage', 'Administration', "//a[@id='topTabAdmin']", '20s', '1s']]</msg>
+<status status="PASS" starttime="20220204 23:47:02.077" endtime="20220204 23:47:02.078"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${name}</arg>
+<arg>${result}[0][0]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:02.079" level="INFO">${name} = landingpage</msg>
+<status status="PASS" starttime="20220204 23:47:02.078" endtime="20220204 23:47:02.079"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${field}</arg>
+<arg>${result}[0][1]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:02.080" level="INFO">${field} = Administration</msg>
+<status status="PASS" starttime="20220204 23:47:02.079" endtime="20220204 23:47:02.080"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${locator}</arg>
+<arg>${result}[0][2]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:02.081" level="INFO">${locator} = //a[@id='topTabAdmin']</msg>
+<status status="PASS" starttime="20220204 23:47:02.080" endtime="20220204 23:47:02.081"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${beforewait}</arg>
+<arg>${result}[0][3]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:02.082" level="INFO">${beforewait} = 20s</msg>
+<status status="PASS" starttime="20220204 23:47:02.081" endtime="20220204 23:47:02.082"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${afterwait}</arg>
+<arg>${result}[0][4]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:02.082" level="INFO">${afterwait} = 1s</msg>
+<status status="PASS" starttime="20220204 23:47:02.082" endtime="20220204 23:47:02.083"/>
+</kw>
+<status status="PASS" starttime="20220204 23:47:02.057" endtime="20220204 23:47:02.083"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${keywordstatus}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>${beforewait}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${beforewait}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220204 23:47:02.083" endtime="20220204 23:47:02.112"/>
+</kw>
+<msg timestamp="20220204 23:47:02.113" level="INFO">${keywordstatus} = True</msg>
+<status status="PASS" starttime="20220204 23:47:02.083" endtime="20220204 23:47:02.113"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${keywordstatus}</var>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>10</arg>
+<arg>2s</arg>
+<arg>Mouse Over</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>2s</arg>
+<arg>Mouse Over</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220204 23:47:02.115" level="INFO">Simulating Mouse Over on element '//a[@id='topTabAdmin']'.</msg>
+<status status="PASS" starttime="20220204 23:47:02.114" endtime="20220204 23:47:02.384"/>
+</kw>
+<status status="PASS" starttime="20220204 23:47:02.114" endtime="20220204 23:47:02.385"/>
+</kw>
+<msg timestamp="20220204 23:47:02.385" level="INFO">${keywordstatus} = True</msg>
+<status status="PASS" starttime="20220204 23:47:02.113" endtime="20220204 23:47:02.386"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${afterwait}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220204 23:47:03.387" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220204 23:47:02.386" endtime="20220204 23:47:03.387"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${keywordstatus}"=="False"</arg>
+<arg>Fail</arg>
+<arg>${fieldname} is not visible on the screen \ ${pagename}... so please check</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220204 23:47:03.387" endtime="20220204 23:47:03.388"/>
+</kw>
+<status status="PASS" starttime="20220204 23:47:02.057" endtime="20220204 23:47:03.388"/>
+</kw>
+<kw name="web_clickelement" library="Commonkeywords">
+<arg>landingpage</arg>
+<arg>add_edit_user</arg>
+<kw name="GetLocatorDetails" library="Commonkeywords">
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<kw name="Log Many" library="BuiltIn">
+<arg>${ObjFile}</arg>
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20220204 23:47:03.389" level="INFO">/media/kanthan/New Volume/bb_autorepo/BB_Automation//Testdata//Objectrepo//objectrepo.xlsx</msg>
+<msg timestamp="20220204 23:47:03.390" level="INFO">landingpage</msg>
+<msg timestamp="20220204 23:47:03.390" level="INFO">add_edit_user</msg>
+<status status="PASS" starttime="20220204 23:47:03.389" endtime="20220204 23:47:03.390"/>
+</kw>
+<kw name="Openexcel" library="excellib">
+<arg>${ObjFile}</arg>
+<arg>Sheet</arg>
+<status status="PASS" starttime="20220204 23:47:03.390" endtime="20220204 23:47:03.404"/>
+</kw>
+<kw name="Filterbasedonpagenameandfieldname" library="excellib">
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<status status="PASS" starttime="20220204 23:47:03.404" endtime="20220204 23:47:03.405"/>
+</kw>
+<kw name="Converttolist" library="excellib">
+<var>${result}</var>
+<msg timestamp="20220204 23:47:03.406" level="INFO">${result} = [['landingpage', 'add_edit_user', "//a[text()='Add/Change/Remove Users']", '20s', '1s']]</msg>
+<status status="PASS" starttime="20220204 23:47:03.405" endtime="20220204 23:47:03.406"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${name}</arg>
+<arg>${result}[0][0]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:03.406" level="INFO">${name} = landingpage</msg>
+<status status="PASS" starttime="20220204 23:47:03.406" endtime="20220204 23:47:03.406"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${field}</arg>
+<arg>${result}[0][1]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:03.407" level="INFO">${field} = add_edit_user</msg>
+<status status="PASS" starttime="20220204 23:47:03.407" endtime="20220204 23:47:03.407"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${locator}</arg>
+<arg>${result}[0][2]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:03.408" level="INFO">${locator} = //a[text()='Add/Change/Remove Users']</msg>
+<status status="PASS" starttime="20220204 23:47:03.407" endtime="20220204 23:47:03.408"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${beforewait}</arg>
+<arg>${result}[0][3]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:03.408" level="INFO">${beforewait} = 20s</msg>
+<status status="PASS" starttime="20220204 23:47:03.408" endtime="20220204 23:47:03.408"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${afterwait}</arg>
+<arg>${result}[0][4]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:03.409" level="INFO">${afterwait} = 1s</msg>
+<status status="PASS" starttime="20220204 23:47:03.409" endtime="20220204 23:47:03.409"/>
+</kw>
+<status status="PASS" starttime="20220204 23:47:03.389" endtime="20220204 23:47:03.409"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${keywordstatus}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>${beforewait}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${beforewait}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220204 23:47:03.410" endtime="20220204 23:47:03.431"/>
+</kw>
+<msg timestamp="20220204 23:47:03.431" level="INFO">${keywordstatus} = True</msg>
+<status status="PASS" starttime="20220204 23:47:03.410" endtime="20220204 23:47:03.431"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${keywordstatus}</var>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>10</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220204 23:47:03.432" level="INFO">Clicking element '//a[text()='Add/Change/Remove Users']'.</msg>
+<status status="PASS" starttime="20220204 23:47:03.432" endtime="20220204 23:47:05.532"/>
+</kw>
+<status status="PASS" starttime="20220204 23:47:03.432" endtime="20220204 23:47:05.533"/>
+</kw>
+<msg timestamp="20220204 23:47:05.533" level="INFO">${keywordstatus} = True</msg>
+<status status="PASS" starttime="20220204 23:47:03.431" endtime="20220204 23:47:05.533"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${afterwait}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220204 23:47:06.534" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220204 23:47:05.533" endtime="20220204 23:47:06.534"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${keywordstatus}"=="False"</arg>
+<arg>Fail</arg>
+<arg>${fieldname} is not visible on the screen \ ${pagename}... so please check</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220204 23:47:06.535" endtime="20220204 23:47:06.536"/>
+</kw>
+<status status="PASS" starttime="20220204 23:47:03.388" endtime="20220204 23:47:06.536"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220204 23:47:06.537" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220204 23:47:06.537" endtime="20220204 23:47:06.553"/>
+</kw>
+<kw name="web_inputtext" library="Commonkeywords">
+<arg>add_edit_user</arg>
+<arg>Username</arg>
+<arg>karthikeyan</arg>
+<kw name="GetLocatorDetails" library="Commonkeywords">
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<kw name="Log Many" library="BuiltIn">
+<arg>${ObjFile}</arg>
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20220204 23:47:06.557" level="INFO">/media/kanthan/New Volume/bb_autorepo/BB_Automation//Testdata//Objectrepo//objectrepo.xlsx</msg>
+<msg timestamp="20220204 23:47:06.557" level="INFO">add_edit_user</msg>
+<msg timestamp="20220204 23:47:06.558" level="INFO">Username</msg>
+<status status="PASS" starttime="20220204 23:47:06.556" endtime="20220204 23:47:06.558"/>
+</kw>
+<kw name="Openexcel" library="excellib">
+<arg>${ObjFile}</arg>
+<arg>Sheet</arg>
+<status status="PASS" starttime="20220204 23:47:06.559" endtime="20220204 23:47:06.573"/>
+</kw>
+<kw name="Filterbasedonpagenameandfieldname" library="excellib">
+<arg>${pagename}</arg>
+<arg>${fieldname}</arg>
+<status status="PASS" starttime="20220204 23:47:06.573" endtime="20220204 23:47:06.576"/>
+</kw>
+<kw name="Converttolist" library="excellib">
+<var>${result}</var>
+<msg timestamp="20220204 23:47:06.577" level="INFO">${result} = [['add_edit_user', 'Username', '//td[text()="User Name"]/parent::tr/td[2]/input', '20s', '1s']]</msg>
+<status status="PASS" starttime="20220204 23:47:06.577" endtime="20220204 23:47:06.577"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${name}</arg>
+<arg>${result}[0][0]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:06.578" level="INFO">${name} = add_edit_user</msg>
+<status status="PASS" starttime="20220204 23:47:06.578" endtime="20220204 23:47:06.579"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${field}</arg>
+<arg>${result}[0][1]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:06.579" level="INFO">${field} = Username</msg>
+<status status="PASS" starttime="20220204 23:47:06.579" endtime="20220204 23:47:06.579"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${locator}</arg>
+<arg>${result}[0][2]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:06.580" level="INFO">${locator} = //td[text()="User Name"]/parent::tr/td[2]/input</msg>
+<status status="PASS" starttime="20220204 23:47:06.580" endtime="20220204 23:47:06.580"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${beforewait}</arg>
+<arg>${result}[0][3]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:06.581" level="INFO">${beforewait} = 20s</msg>
+<status status="PASS" starttime="20220204 23:47:06.581" endtime="20220204 23:47:06.581"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${afterwait}</arg>
+<arg>${result}[0][4]</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220204 23:47:06.582" level="INFO">${afterwait} = 1s</msg>
+<status status="PASS" starttime="20220204 23:47:06.582" endtime="20220204 23:47:06.583"/>
+</kw>
+<status status="PASS" starttime="20220204 23:47:06.555" endtime="20220204 23:47:06.583"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${keywordstatus}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>${beforewait}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${beforewait}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220204 23:47:06.584" endtime="20220204 23:47:06.689"/>
+</kw>
+<msg timestamp="20220204 23:47:06.689" level="INFO">${keywordstatus} = True</msg>
+<status status="PASS" starttime="20220204 23:47:06.583" endtime="20220204 23:47:06.690"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${keywordstatus}</var>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>3</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${inputtext}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${inputtext}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${inputtext}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220204 23:47:06.694" level="INFO">Typing text 'karthikeyan' into text field '//td[text()="User Name"]/parent::tr/td[2]/input'.</msg>
+<status status="PASS" starttime="20220204 23:47:06.693" endtime="20220204 23:47:06.779"/>
+</kw>
+<status status="PASS" starttime="20220204 23:47:06.691" endtime="20220204 23:47:06.780"/>
+</kw>
+<msg timestamp="20220204 23:47:06.780" level="INFO">${keywordstatus} = True</msg>
+<status status="PASS" starttime="20220204 23:47:06.690" endtime="20220204 23:47:06.780"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${afterwait}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220204 23:47:07.782" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220204 23:47:06.781" endtime="20220204 23:47:07.782"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${keywordstatus}"=="False"</arg>
+<arg>Fail</arg>
+<arg>${fieldname} is not visible on the screen \ ${pagename}... so please check</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220204 23:47:07.783" endtime="20220204 23:47:07.784"/>
+</kw>
+<status status="PASS" starttime="20220204 23:47:06.554" endtime="20220204 23:47:07.785"/>
+</kw>
+<status status="PASS" starttime="20220204 23:46:52.532" endtime="20220204 23:47:07.785"/>
+</test>
+<status status="PASS" starttime="20220204 23:46:51.802" endtime="20220204 23:47:07.787"/>
+</suite>
+<status status="PASS" starttime="20220204 23:46:51.800" endtime="20220204 23:47:07.790"/>
+</suite>
+<status status="PASS" starttime="20220204 23:46:51.777" endtime="20220204 23:47:07.794"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="BB Automation">BB Automation</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testcases">BB Automation.Testcases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="BB automation">BB Automation.Testcases.BB automation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

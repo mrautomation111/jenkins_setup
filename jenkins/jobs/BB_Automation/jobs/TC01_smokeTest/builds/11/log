@@ -1,0 +1,34 @@
+Started by user [8mha:////4PawSXoOCXoQ2Ej0vEC2CUl/7QnxBditNbIBAImO8zNMAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mMr.Automation
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /home/kanthan/.jenkins/workspace/BB_Automation/TC01_smokeTest
+[TC01_smokeTest] $ /bin/sh -xe /tmp/jenkins4578009372090208536.sh
++ cd /media/kanthan/New Volume/bb_autorepo/BB_Automation
++ robot -t TC01_Accountsummaryverfication Testcases/BB_automation.robot --outputdir /home/kanthan/Desktop/RF_logs/
+[ ERROR ] Parsing '--outputdir' failed: File or directory to execute does not exist.
+
+Try --help for usage information.
+Build step 'Execute shell' marked build as failure
+Robot results publisher started...
+-Parsing output xml:
+Failed!
+hudson.AbortException: No files found in path /home/kanthan/Desktop/RF_logs with configured filemask: output.xml
+	at hudson.plugins.robot.RobotParser$RobotParserCallable.invoke(RobotParser.java:76)
+	at hudson.plugins.robot.RobotParser$RobotParserCallable.invoke(RobotParser.java:52)
+	at hudson.FilePath.act(FilePath.java:1171)
+	at hudson.FilePath.act(FilePath.java:1154)
+	at hudson.plugins.robot.RobotParser.parse(RobotParser.java:48)
+	at hudson.plugins.robot.RobotPublisher.parse(RobotPublisher.java:245)
+	at hudson.plugins.robot.RobotPublisher.perform(RobotPublisher.java:267)
+	at jenkins.tasks.SimpleBuildStep.perform(SimpleBuildStep.java:123)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:78)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:806)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:755)
+	at hudson.model.Build$BuildExecution.post2(Build.java:178)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:699)
+	at hudson.model.Run.execute(Run.java:1913)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:99)
+	at hudson.model.Executor.run(Executor.java:432)
+Finished: FAILURE

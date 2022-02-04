@@ -1,0 +1,78 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<result plugin="robot@3.0.1">
+  <logFile>log.html</logFile>
+  <reportFile>report.html</reportFile>
+  <timeStamp>20220204 23:46:51.767</timeStamp>
+  <suites>
+    <entry>
+      <string>BB Automation</string>
+      <suite>
+        <duplicateSafeName>BB Automation</duplicateSafeName>
+        <logFile>log.html</logFile>
+        <reportFile>report.html</reportFile>
+        <id>s1</id>
+        <children>
+          <entry>
+            <string>Testcases</string>
+            <suite>
+              <duplicateSafeName>Testcases</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <reportFile>report.html</reportFile>
+              <id>s1-s1</id>
+              <children>
+                <entry>
+                  <string>BB automation</string>
+                  <suite>
+                    <duplicateSafeName>BB automation</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <reportFile>report.html</reportFile>
+                    <id>s1-s1-s1</id>
+                    <children/>
+                    <parent class="suite" reference="../../../.."/>
+                    <name>BB automation</name>
+                    <description></description>
+                    <caseResults>
+                      <entry>
+                        <string>TC01_Accountsummaryverfication</string>
+                        <case>
+                          <duplicateSafeName>TC01_Accountsummaryverfication</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s1-s1-t1</id>
+                          <passed>true</passed>
+                          <skipped>false</skipped>
+                          <critical>false</critical>
+                          <name>TC01_Accountsummaryverfication</name>
+                          <description></description>
+                          <starttime>20220204 23:46:52.532</starttime>
+                          <endtime>20220204 23:47:07.785</endtime>
+                          <tags/>
+                          <stackTrace></stackTrace>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                    </caseResults>
+                    <startTime>20220204 23:46:51.802</startTime>
+                    <endTime>20220204 23:47:07.787</endTime>
+                  </suite>
+                </entry>
+              </children>
+              <parent class="suite" reference="../../../.."/>
+              <name>Testcases</name>
+              <description></description>
+              <caseResults/>
+              <startTime>20220204 23:46:51.800</startTime>
+              <endTime>20220204 23:47:07.790</endTime>
+            </suite>
+          </entry>
+        </children>
+        <parent class="result" reference="../../../.."/>
+        <name>BB Automation</name>
+        <description></description>
+        <caseResults/>
+        <startTime>20220204 23:46:51.777</startTime>
+        <endTime>20220204 23:47:07.794</endTime>
+      </suite>
+    </entry>
+  </suites>
+</result>
